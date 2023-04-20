@@ -27,3 +27,19 @@ if(dayNumber == 6){
 if(dayNumber == 7){
         Console.WriteLine("Воскресенье");
     }
+    // switch(a){
+    //     case 1:
+    //     Console.WriteLine("Понедельник");
+    //     case 2:
+    //     Console.WriteLine("Вторник");
+    //     case 3:
+    //     Console.WriteLine("Среда");
+    //     case 4:
+    //     Console.WriteLine("Четверг");
+    //     case 5:
+    //     Console.WriteLine("Пятница");
+    //     case 6:
+    //     Console.WriteLine("Суббота");
+    //     case 7:
+    //     Console.WriteLine("Воскресенье");
+    // }
