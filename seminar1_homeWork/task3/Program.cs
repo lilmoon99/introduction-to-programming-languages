@@ -14,19 +14,19 @@ while (isNotDone)
         Console.Write("Enter a number: ");
         string readLine = Console.ReadLine();
         numberToCheck = Convert.ToInt32(readLine);
-        if (numberToCheck % 2 == 0)
-        {
-            Console.WriteLine("Your number is even.");
-        }
-        else
-        {
-            Console.WriteLine("Your number is odd.");
-        }
         isNotDone = false;
     }
     catch
     {
         FormatException exception;
-        Console.WriteLine("You entered wrong number. Please try again...");
+        Console.WriteLine("You entered not a number. Please try again...");
     }
+}
+if (numberToCheck % 2 == 0)
+{
+    Console.WriteLine("Your number is even.");
+}
+else
+{
+    Console.WriteLine("Your number is odd.");
 }
