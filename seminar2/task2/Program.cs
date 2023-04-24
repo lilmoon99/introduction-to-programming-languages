@@ -4,10 +4,11 @@
 456 -> 46
 782 -> 72
 918 -> 98
+*/
+Random rand = new Random();
+int number = rand.Next(100,1000);
+System.Console.WriteLine(number);
 
-Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
-
-5, 25  ->  да
--4, 16  ->  да
-25, 5  ->  да
-8,9  ->  нет */
+int firstNumber = number / 100;
+int lastNumber = number % 10;
+System.Console.WriteLine($"Result is: {firstNumber} {lastNumber}");
