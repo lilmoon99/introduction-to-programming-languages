@@ -6,9 +6,12 @@
 */
 
 System.Console.WriteLine("Enter a three-digit number: ");
+
 int number = Convert.ToInt32(Console.ReadLine());
 
 if (number > 99 && number < 1000)
 {
     System.Console.WriteLine((number % 100)/10);
+} else {
+    System.Console.WriteLine("You entered a wrong number...");
 }

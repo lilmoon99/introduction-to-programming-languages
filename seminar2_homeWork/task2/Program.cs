@@ -9,10 +9,14 @@ Console.WriteLine("Enter a number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int divider = 1000;
 int counter = 0;
+if(number < 0){
+    number = number * (-1);
+}
 if (number < 99)
 {
     System.Console.WriteLine("You dont have third digit on your number.");
-} else{
+} 
+else{
 while (number > divider) // определяем к какому промежутку чисел принадлежит число 
 {
     divider = divider * 10;
