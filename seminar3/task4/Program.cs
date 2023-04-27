@@ -19,6 +19,7 @@ for (int i = 0; i < secondPoint.Length; i++)
     secondPoint[i] = Convert.ToInt32(Console.ReadLine());
 }
 int numberForSqrt = (secondPoint[0] - firstPoint[0])*(secondPoint[0] - firstPoint[0]) + (secondPoint[1] - firstPoint[1])*(secondPoint[1] - firstPoint[1]);
-double distanse = Math.Sqrt(numberForSqrt);
+double numberForSqrt2 = Math.Pow((double)secondPoint[0] - (double)firstPoint[0],2.0) + Math.Pow((double)secondPoint[1] - (double)firstPoint[1],2.0);
+double distanse = Math.Sqrt(numberForSqrt2);
 
-System.Console.WriteLine(distanse);
+System.Console.WriteLine(Math.Round(distanse,3));
