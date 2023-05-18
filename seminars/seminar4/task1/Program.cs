@@ -7,9 +7,9 @@ System.Console.WriteLine("Enter a number: ");
 int a = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine($"{a} -> {Sum(a)}");
 
-int Sum(int a){
+int Sum(int number){
     int result = 0;
-    for(int i = 0;i <= a;i++){
+    for(int i = 0;i <= number;i++){
         result += i;
     }
     return result;
