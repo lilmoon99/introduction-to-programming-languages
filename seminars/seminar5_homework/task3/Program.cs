@@ -22,8 +22,7 @@ double RandomDoubleInRange(double min, double max)
     Random rand = new Random();
     double range = max - min;
     double sample = rand.NextDouble();
-    double scaled = (sample * range) + min;
-    return scaled;
+    return (sample * range) + min;
 }
 
 double MaxMinSub(double[] array)
