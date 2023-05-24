@@ -31,12 +31,13 @@ double MaxMinSub(double[] array)
     double maxValue = array[0];
     for (int i = 0; i < array.Length; i++)
     {
-        for (int j = 0; j < array.Length; j++)
+        
+        if(maxValue < array[i]) maxValue = array[i];
+    }
+    for (int j = 0; j < array.Length; j++)
         {
             if(minValue > array[j]) minValue = array[j];
         }
-        if(maxValue < array[i]) maxValue = array[i];
-    }
     System.Console.WriteLine($"max = {maxValue},min = {minValue}");
     return maxValue - minValue;
 }
