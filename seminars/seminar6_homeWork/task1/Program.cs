@@ -1,4 +1,10 @@
-﻿System.Console.WriteLine("Enter a numbers.For example: 1,2,3,4,5,6");
+﻿/*
+Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+0, 7, 8, -2, -2 -> 2
+1, -7, 567, 89, 223-> 3
+*/
+
+System.Console.WriteLine("Enter a numbers.For example: 1,2,3,4,5,6");
 string numbers = Console.ReadLine();
 bool IsNotANumber = false;
 string[] arrayOfStr = numbers.Split(',',' ','.','/','|');
