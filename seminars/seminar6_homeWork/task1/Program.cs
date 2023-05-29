@@ -6,15 +6,11 @@
 
 System.Console.WriteLine("Enter a numbers.For example: 1,2,3,4,5,6");
 string numbers = Console.ReadLine();
-bool IsNotANumber = false;
 string[] arrayOfStr = numbers.Split(',', ' ', '.', '/', '|');
 int[] numbersArray = CopyToIntArray(arrayOfStr);
 
-if (!IsNotANumber)
-{
-    System.Console.WriteLine($"{String.Join('|', CopyToIntArray(arrayOfStr))}");
+    System.Console.WriteLine($"{String.Join('|', numbersArray)}");
     System.Console.WriteLine($"There is {NumbersGreaterThanZero(numbersArray)} numbers greater than zero(0).");
-}
 
 int[] CopyToIntArray(string[] array)
 {
@@ -27,9 +23,7 @@ int[] CopyToIntArray(string[] array)
         }
         catch (FormatException)
         {
-            System.Console.WriteLine($"{array[i]} is not a number.Please try again.");
-            IsNotANumber = true;
-            break;
+            System.Console.WriteLine($"{array[i]} is not a number.");
         }
 
     }
