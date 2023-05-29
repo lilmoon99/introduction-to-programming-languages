@@ -7,8 +7,14 @@
 System.Console.WriteLine("Enter a numbers.For example: 1,2,3,4,5,6");
 string numbers = Console.ReadLine();
 bool IsNotANumber = false;
-string[] arrayOfStr = numbers.Split(',',' ','.','/','|');
+string[] arrayOfStr = numbers.Split(',', ' ', '.', '/', '|');
 int[] numbersArray = CopyToIntArray(arrayOfStr);
+
+if (!IsNotANumber)
+{
+    System.Console.WriteLine($"{String.Join('|', CopyToIntArray(arrayOfStr))}");
+    System.Console.WriteLine($"There is {NumbersGreaterThanZero(numbersArray)} numbers greater than zero(0).");
+}
 
 int[] CopyToIntArray(string[] array)
 {
@@ -23,23 +29,15 @@ int[] CopyToIntArray(string[] array)
         {
             System.Console.WriteLine($"{array[i]} is not a number.Please try again.");
             IsNotANumber = true;
-        }
-        if (IsNotANumber)
-        {
             break;
         }
+
     }
     return tempArray;
 }
 
-if (IsNotANumber == false)
-{
-    System.Console.WriteLine($"{String.Join('|', CopyToIntArray(arrayOfStr))}");
-    NumbersGreaterThanZero(numbersArray);
-}
 
-
-void NumbersGreaterThanZero(int[] array)
+int NumbersGreaterThanZero(int[] array)
 {
     int counter = 0;
     for (int i = 0; i < array.Length; i++)
@@ -49,7 +47,7 @@ void NumbersGreaterThanZero(int[] array)
             counter++;
         }
     }
-    System.Console.WriteLine($"There is {counter} numbers greater than zero(0).");
+    return counter;
 }
 
 
