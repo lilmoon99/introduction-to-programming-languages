@@ -26,5 +26,5 @@ rec(4, 8);
 string Recur(int start,int end){
     if (start == end) { 
         return start.ToString();
-    } else (start + Recur(start + 1,end));
+    } else return (start + Recur(start + 1,end));
 }
